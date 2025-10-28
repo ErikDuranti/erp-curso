@@ -1,0 +1,704 @@
+{
+	"info": {
+		"_postman_id": "d763da89-9987-4bf8-a5fe-aa05331532c8",
+		"name": "erp-curso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48031045",
+		"_collection_link": "https://erikduranti-7481144.postman.co/workspace/Erik-Duranti's-Workspace~8811a6b1-bcd1-4e5a-801f-1a7e8e4ba678/collection/48031045-d763da89-9987-4bf8-a5fe-aa05331532c8?action=share&source=collection_link&creator=48031045"
+	},
+	"item": [
+		{
+			"name": "Professores",
+			"item": [
+				{
+					"name": "register_teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Maria Silva\",\r\n    \"email\": \"maria.silva@uni.com\",\r\n    \"telefone\": \"9999-8888\",\r\n    \"escolaridade\": \"Mestrado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/professores",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/professores",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/professores/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"professores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"telefone\": \"9999-7777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/professores/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"professores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/professores/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"professores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "register_student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\": \"2025001\",\r\n    \"nome\": \"João Souza\",\r\n    \"email\": \"joao.souza@aluno.com\",\r\n    \"telefone\": \"1111-2222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/alunos",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\": \"2025001\",\r\n    \"nome\": \"João Souza\",\r\n    \"email\": \"joao.souza@aluno.com\",\r\n    \"telefone\": \"1111-2222\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/alunos",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\": \"2025001\",\r\n    \"nome\": \"João Souza\",\r\n    \"email\": \"joao.souza@aluno.com\",\r\n    \"telefone\": \"1111-2222\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/alunos/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Souza\",\r\n}"
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/alunos/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Souza\",\r\n}"
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/alunos/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turmas",
+			"item": [
+				{
+					"name": "register_class",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"semestre_letivo\": \"2025/2\",\r\n    \"nome_disciplina\": \"Programação Web\",\r\n    \"max_alunos\": 30,\r\n    \"professor_id\": 1,\r\n    \"dia_semana\": \"Segunda\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/turmas",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/turmas",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/turmas/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"turmas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/turmas/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"turmas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/turmas/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"turmas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matriculas",
+			"item": [
+				{
+					"name": "register_enrollment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"aluno_id\": 1,\r\n    \"turmas_ids\": [1, 2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}matriculas",
+							"host": [
+								"{{URL_BASE}}matriculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_enrollment_by_student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/matriculas/aluno/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"matriculas",
+								"aluno",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_students_in_class",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/matriculas/turma/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"matriculas",
+								"turma",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_enrollment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJyb2xlIjoiYWx1bm8iLCJpYXQiOjE3NjE2MjEzMTEsImV4cCI6MTc2MTYyNDkxMX0.b-7PQo-BlcqPsQlef3SqXcZiWEEeHdnwGaTHDyB4zyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/matriculas/1",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"matriculas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome_completo\": \"Erik da Silva Duranti\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_BASE}}/auth/register",
+					"host": [
+						"{{URL_BASE}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"teste@teste.com\",\r\n    \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_BASE}}/auth/login",
+					"host": [
+						"{{URL_BASE}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
